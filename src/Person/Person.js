@@ -1,9 +1,9 @@
 import React from "react";    //needed for interally react.createlement()
-import { tsPropertySignature } from "@babel/types";
+import "./Person.css";
 
 const person = (props) => { // in class use this.props and in function use props directly.
     return (
-    <div>
+    <div className="Person">
         <p onClick={props.click}>{props.name}</p>
         <p >
             {props.children}
