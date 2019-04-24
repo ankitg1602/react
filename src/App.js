@@ -12,12 +12,12 @@ class App extends Component {
     otherState: 'some other value'
   };
 
-  switchNameHandler = (name) => {
+  switchNameHandler = (event) => {
     // console.log('Was clicked!');
     // DON'T DO THIS: this.state.persons[0].name = 'Maximilian';
     this.setState({
       persons: [
-        { name: name, age: 28 },
+        { name: event.target.value, age: 28 },
         { name: 'Manu', age: 29 },
         { name: 'Stephanie', age: 27 }
       ]
@@ -38,6 +38,7 @@ class App extends Component {
           name={this.state.persons[1].name}
           age={this.state.persons[1].age}
           click={this.switchNameHandler.bind(this, "abc")}
+          changed={this.switchNameHandler}
         >
           My Hobbies: Racing
         </Person>
