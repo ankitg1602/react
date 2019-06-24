@@ -13,6 +13,7 @@ class NewPost extends Component {
     }
 
     componentDidMount () {
+        // this.props.history.replace('/posts');  if user not auth
         console.log(this.props);
     }
 
